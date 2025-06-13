@@ -4,5 +4,7 @@
 
 /* Optional global styles */
 body {
-  @apply scroll-smooth bg-red text-gray-800;
+  scroll-behavior: smooth;
+  background-color: white;
+  color: #1f2937;
 }
