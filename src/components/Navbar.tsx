@@ -10,16 +10,20 @@ import {
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-10 backdrop-blur-sm bg-white/90">
+    <nav className="bg-background/80 shadow-md sticky top-0 z-10 backdrop-blur-sm border-b border-border/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -37,7 +41,7 @@ const Navbar = () => {
                     href="#home"
                     className={`${navigationMenuTriggerStyle()} hover:text-primary hover:bg-transparent`}
                   >
-                    Home
+                    {t('navbar.home')}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -45,7 +49,7 @@ const Navbar = () => {
                     href="#about"
                     className={`${navigationMenuTriggerStyle()} hover:text-primary hover:bg-transparent`}
                   >
-                    About
+                    {t('navbar.about')}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -53,7 +57,7 @@ const Navbar = () => {
                     href="#services"
                     className={`${navigationMenuTriggerStyle()} hover:text-primary hover:bg-transparent`}
                   >
-                    Services
+                    {t('navbar.services')}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -61,7 +65,7 @@ const Navbar = () => {
                     href="#testimonials"
                     className={`${navigationMenuTriggerStyle()} hover:text-primary hover:bg-transparent`}
                   >
-                    Testimonials
+                    {t('navbar.testimonials')}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -69,15 +73,20 @@ const Navbar = () => {
                     href="#contact"
                     className={`${navigationMenuTriggerStyle()} hover:text-primary hover:bg-transparent`}
                   >
-                    Contact
+                    {t('navbar.contact')}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            <div className="ml-4 flex items-center gap-4">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
           </div>
           
           {/* Mobile menu button */}
-          <div className="flex md:hidden items-center">
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
@@ -107,32 +116,35 @@ const Navbar = () => {
             asChild variant="ghost" 
             className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
           >
-            <a href="#home">Home</a>
+            <a href="#home">{t('navbar.home')}</a>
           </Button>
           <Button 
             asChild variant="ghost" 
             className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
           >
-            <a href="#about">About</a>
+            <a href="#about">{t('navbar.about')}</a>
           </Button>
           <Button 
             asChild variant="ghost" 
             className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
           >
-            <a href="#services">Services</a>
+            <a href="#services">{t('navbar.services')}</a>
           </Button>
           <Button 
             asChild variant="ghost" 
             className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
           >
-            <a href="#testimonials">Testimonials</a>
+            <a href="#testimonials">{t('navbar.testimonials')}</a>
           </Button>
           <Button 
             asChild variant="ghost" 
             className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
           >
-            <a href="#contact">Contact</a>
+            <a href="#contact">{t('navbar.contact')}</a>
           </Button>
+          <div className="px-2 pt-2">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </nav>

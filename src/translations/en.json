@@ -1,0 +1,38 @@
+{
+  "translation": {
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Welcome to Om Muktinath",
+      "subtitle": "Your trusted partner for reliable services"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn more about our company and our journey"
+    },
+    "services": {
+      "title": "Our Services",
+      "viewMore": "View More"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+}
