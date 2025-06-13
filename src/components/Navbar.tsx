@@ -13,10 +13,12 @@ import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTheme } from "./theme-provider";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -108,42 +110,56 @@ const Navbar = () => {
       {/* Mobile menu, show/hide based on menu state */}
       <div 
         className={`${
-          isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
         } md:hidden overflow-hidden transition-all duration-300 ease-in-out`}
       >
-        <div className="px-2 py-3 space-y-2 sm:px-3 bg-white/80 backdrop-blur-sm shadow-inner">
-          <Button 
-            asChild variant="ghost" 
-            className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
-          >
-            <a href="#home">{t('navbar.home')}</a>
-          </Button>
-          <Button 
-            asChild variant="ghost" 
-            className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
-          >
-            <a href="#about">{t('navbar.about')}</a>
-          </Button>
-          <Button 
-            asChild variant="ghost" 
-            className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
-          >
-            <a href="#services">{t('navbar.services')}</a>
-          </Button>
-          <Button 
-            asChild variant="ghost" 
-            className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
-          >
-            <a href="#testimonials">{t('navbar.testimonials')}</a>
-          </Button>
-          <Button 
-            asChild variant="ghost" 
-            className="w-full justify-start text-base hover:text-primary hover:bg-gray-50"
-          >
-            <a href="#contact">{t('navbar.contact')}</a>
-          </Button>
-          <div className="px-2 pt-2">
-            <LanguageSwitcher />
+        <div className="px-4 py-4 space-y-4 bg-background border-t border-border/20 shadow-inner">
+          {/* Language switcher in mobile menu */}
+          <div className="mb-2 pb-3 border-b border-border/30">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-muted-foreground">
+                  {t('navbar.language', 'Language')}
+                </span>
+              </div>
+              <div className="py-1">
+                <LanguageSwitcher mobileView={true} />
+              </div>
+            </div>
+          </div>
+          
+          {/* Navigation links */}
+          <div className="space-y-1.5">
+            <Button 
+              asChild variant="ghost" 
+              className="w-full justify-start text-base hover:text-primary hover:bg-muted/50"
+            >
+              <a href="#home">{t('navbar.home')}</a>
+            </Button>
+            <Button 
+              asChild variant="ghost" 
+              className="w-full justify-start text-base hover:text-primary hover:bg-muted/50"
+            >
+              <a href="#about">{t('navbar.about')}</a>
+            </Button>
+            <Button 
+              asChild variant="ghost" 
+              className="w-full justify-start text-base hover:text-primary hover:bg-muted/50"
+            >
+              <a href="#services">{t('navbar.services')}</a>
+            </Button>
+            <Button 
+              asChild variant="ghost" 
+              className="w-full justify-start text-base hover:text-primary hover:bg-muted/50"
+            >
+              <a href="#testimonials">{t('navbar.testimonials')}</a>
+            </Button>
+            <Button 
+              asChild variant="ghost" 
+              className="w-full justify-start text-base hover:text-primary hover:bg-muted/50"
+            >
+              <a href="#contact">{t('navbar.contact')}</a>
+            </Button>
           </div>
         </div>
       </div>
