@@ -1,5 +1,10 @@
 {
   "translation": {
+    "whatsapp": {
+      "text": "Chat with us",
+      "ariaLabel": "Chat with us on WhatsApp",
+      "message": "Hello, I would like to schedule an appointment."
+    },
     "navbar": {
       "home": "Home",
       "about": "About",
