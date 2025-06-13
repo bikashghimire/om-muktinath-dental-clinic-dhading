@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import React from 'react'
 
 import './styles/globals.css'
+import Hero from './sections/Hero'
 
-function App() {
-
+const App: React.FC = () => {
   return (
-  <h1>Hey this is a heading</h1>
+    <div className="App">
+      <Hero />
+    
+    </div>
   )
 }
 

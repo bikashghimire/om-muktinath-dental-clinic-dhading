@@ -4,5 +4,5 @@
 
 /* Optional global styles */
 body {
-  @apply scroll-smooth bg-white text-gray-800;
+  @apply scroll-smooth bg-red text-gray-800;
 }
