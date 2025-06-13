@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         primary: '#0066CC', // example dental blue
+        'primary-dark': '#0052A3', // darker shade for hover states
       },
     },
   },

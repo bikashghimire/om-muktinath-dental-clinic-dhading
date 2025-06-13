@@ -1,0 +1,32 @@
+.test-red {
+  background-color: red;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.test-blue {
+  background-color: #0066CC;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.test-green {
+  background-color: green;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.test-container {
+  padding: 16px;
+}
+
+.test-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
