@@ -17,7 +17,22 @@
     },
     "services": {
       "title": "Our Services",
-      "viewMore": "View More"
+      "description": "We offer a wide range of dental services to meet your needs, from routine check-ups to advanced cosmetic procedures.",
+      "viewMore": "View More",
+      "generalDentistry": "General Dentistry",
+      "generalDesc": "Comprehensive exams, cleanings, and preventive care.",
+      "cosmeticDentistry": "Cosmetic Dentistry",
+      "cosmeticDesc": "Teeth whitening, veneers, and smile makeovers.",
+      "orthodontics": "Orthodontics",
+      "orthodonticsDesc": "Braces and clear aligners for a straighter smile.",
+      "oralSurgery": "Oral Surgery",
+      "oralSurgeryDesc": "Extractions, implants, and other surgical procedures.",
+      "pediatricDentistry": "Pediatric Dentistry",
+      "pediatricDesc": "Specialized care for children's dental health.",
+      "emergencyCare": "Emergency Care",
+      "emergencyDesc": "Prompt treatment for dental emergencies.",
+      "contactText": "Contact us today to schedule an appointment and learn more about how we can help you achieve a healthy, beautiful smile!",
+      "scheduleAppointment": "Schedule an Appointment"
     },
     "testimonials": {
       "title": "What Our Clients Say"
