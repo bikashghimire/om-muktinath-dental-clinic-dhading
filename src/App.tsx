@@ -31,7 +31,7 @@ const App: React.FC = () => {
         
         {/* WhatsApp Floating Button */}
         <WhatsAppButton 
-          phoneNumber="9779876543210" 
+          phoneNumber="9779860588608" 
           message={t('whatsapp.message')}
         />
       </div>

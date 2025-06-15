@@ -21,19 +21,6 @@ const LanguageSwitcher = ({ mobileView = false }: LanguageSwitcherProps) => {
       <div className="grid grid-cols-2 gap-2 w-full">
         <button
           type="button"
-          onClick={() => i18n.changeLanguage('en')}
-          className={cn(
-            "py-2 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-1.5",
-            currentLanguage === 'en'
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "bg-muted text-foreground hover:bg-muted/80 active:bg-muted/90"
-          )}
-        >
-          <span className="text-xs">🇺🇸</span>
-          <span>English</span>
-        </button>
-        <button
-          type="button"
           onClick={() => i18n.changeLanguage('np')}
           className={cn(
             "py-2 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-1.5",
@@ -44,6 +31,19 @@ const LanguageSwitcher = ({ mobileView = false }: LanguageSwitcherProps) => {
         >
           <span className="text-xs">🇳🇵</span>
           <span>नेपाली</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => i18n.changeLanguage('en')}
+          className={cn(
+            "py-2 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-1.5",
+            currentLanguage === 'en'
+              ? "bg-primary text-primary-foreground shadow-sm"
+              : "bg-muted text-foreground hover:bg-muted/80 active:bg-muted/90"
+          )}
+        >
+          <span className="text-xs">🇺🇸</span>
+          <span>English</span>
         </button>
       </div>
     );
@@ -56,7 +56,7 @@ const LanguageSwitcher = ({ mobileView = false }: LanguageSwitcherProps) => {
       onClick={toggleLanguage}
       className="flex items-center gap-1 px-3"
     >
-      {currentLanguage === 'en' ? (
+      {currentLanguage === 'np' ? (
         <>
           <span className="text-xs">🇺🇸</span>
           <span>EN</span>

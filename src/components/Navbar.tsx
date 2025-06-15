@@ -58,17 +58,21 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-          return (
-          <nav className={`sticky top-0 z-10 backdrop-blur-sm transition-all duration-300 bg-background/95 shadow-md border-b border-border/40`}>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="flex justify-between h-20">
-                      <div className="flex items-center">
-                          <div className="flex-shrink-0 flex items-center">
-                              <span className="font-bold text-2xl md:text-3xl tracking-tight text-primary">
-                                  Smile Dental Clinic
-                              </span>
-                          </div>
-                      </div>
+  return (
+    <nav className={`sticky top-0 z-10 backdrop-blur-sm transition-all duration-300 bg-background/95 shadow-md border-b border-border/40`}>
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 md:h-20">
+          <div className="flex items-center">
+            <div className="flex-shrink-0 flex items-center">
+              {/* Full name on larger screens, shortened name on very small screens */}
+              <span className="hidden sm:inline font-bold text-lg md:text-2xl lg:text-3xl tracking-tight text-primary">
+                {t('navbar.clinicName', 'Om Muktinath Dental Home')}
+              </span>
+              <span className="sm:hidden font-bold text-base tracking-tight text-primary leading-tight">
+                {t('navbar.shortClinicName', 'Om Muktinath')}
+              </span>
+            </div>
+          </div>
 
                       {/* Desktop menu */}
                       <div className="hidden md:flex md:items-center">

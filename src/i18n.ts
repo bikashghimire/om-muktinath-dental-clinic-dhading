@@ -20,7 +20,10 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage']
-    }
+    },
+    // Force Nepali as default language if not explicitly set
+    load: 'languageOnly',
+    initImmediate: false
   });
 
 export default i18n;

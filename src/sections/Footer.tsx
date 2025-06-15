@@ -21,7 +21,7 @@ const Footer = () => {
                         </div>
                         <p className="text-sm">
                             Website developed by <a 
-                                href="https://bikashdev.com" 
+                                href="https://bikashdev-com.vercel.app/" 
                                 className="font-medium underline hover:text-gray-200 transition-colors"
                                 target="_blank" 
                                 rel="noopener noreferrer"

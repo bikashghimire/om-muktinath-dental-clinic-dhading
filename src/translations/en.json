@@ -11,7 +11,9 @@
       "services": "Services",
       "testimonials": "Testimonials",
       "contact": "Contact",
-      "language": "Language"
+      "language": "Language",
+      "clinicName": "Om Muktinath Dental Home",
+      "shortClinicName": "Om Muktinath Dental Home"
     },
     "hero": {
       "title": "Welcome to Om Muktinath",
@@ -19,7 +21,20 @@
     },
     "about": {
       "title": "About Us",
-      "description": "Learn more about our company and our journey"
+      "description": "Learn more about our dental clinic and our journey to provide the best dental care",
+      "clinicName": "Om Muktinath Dental Home",
+      "intro": "At Om Muktinath Dental Home, we combine modern technology with compassionate care to give you the best dental experience possible. Our team of experienced dentists and staff are dedicated to providing high-quality dental services in a comfortable and welcoming environment.",
+      "services": "We offer a comprehensive range of dental services including general dentistry, cosmetic procedures, orthodontics, pediatric care, and emergency treatments. Our clinic is equipped with state-of-the-art technology to ensure precise diagnoses and effective treatments.",
+      "mission": "Our mission is to help our patients achieve and maintain optimal oral health through preventive care, education, and personalized treatment plans. We believe in transparent communication and making dental care accessible to everyone.",
+      "whyChooseUs": "Why Choose Us",
+      "reasonsTitle": "Why Choose Us:",
+      "reason1": "Experienced team of dental professionals",
+      "reason2": "Modern equipment and techniques",
+      "reason3": "Comfortable and relaxing environment",
+      "reason4": "Affordable and transparent pricing",
+      "reason5": "Convenient location and flexible hours",
+      "ourVision": "Our Vision",
+      "visionText": "To be the leading dental care provider in the region, recognized for excellence in patient care, innovative treatments, and community service. We strive to create beautiful, healthy smiles that last a lifetime."
     },
     "services": {
       "title": "Our Services",
@@ -38,7 +53,15 @@
       "emergencyCare": "Emergency Care",
       "emergencyDesc": "Prompt treatment for dental emergencies.",
       "contactText": "Contact us today to schedule an appointment and learn more about how we can help you achieve a healthy, beautiful smile!",
-      "scheduleAppointment": "Schedule an Appointment"
+      "scheduleAppointment": "Schedule an Appointment",
+      "priceList": "Price List",
+      "viewPriceList": "View Price List",
+      "priceListTitle": "Om Muktinath Dental Home - Price List",
+      "priceListDesc": "Our transparent pricing for all dental procedures",
+      "service": "Service",
+      "price": "Price",
+      "panNumber": "PAN No. 132323768",
+      "closePriceList": "Close"
     },
     "testimonials": {
       "title": "What Our Clients Say"
@@ -51,25 +74,30 @@
       "message": "Message",
       "submit": "Submit",
       "openingHours": "Opening Hours",
+      "everyday": "Everyday",
       "mondayFriday": "Monday - Friday",
       "saturday": "Saturday",
       "sunday": "Sunday",
       "closed": "Closed",
       "phone": "Phone",
       "location": "Location",
-      "locationName": "Om Muktinath, Syangja",
+      "locationName": "Dhadingbesi bichbazar chowk",
+      "locationAddress": "Opposite to bus ticket counter 1st floor",
       "gps": "GPS",
       "openInMaps": "Open in Google Maps",
       "openMaps": "Open in Maps",
       "needAppointment": "Need to make an appointment?",
-      "callOrSend": "Call us or send an email for quick assistance",
+      "callOrSend": "Call us for quick assistance",
       "callNow": "Call Now",
-      "emailUs": "Email Us",
       "getDirections": "Get Directions",
       "shareLocation": "Share Location",
       "shareLocationTitle": "Om Muktinath Location",
       "shareLocationText": "Check out Om Muktinath location on Google Maps",
-      "viewClinicPhotos": "View Clinic Photos"
+      "viewClinicPhotos": "View Clinic Photos",
+      "doctorInfo": "Dr. Anil Gurung",
+      "doctorQualification": "BDS PDCH (TU) MOE",
+      "doctorRegistration": "NMC 33664",
+      "doctorQuote": "A genuine smile comes from the heart, but a healthy smile comes from good dental care"
     },
     "footer": {
       "rights": "All rights reserved",

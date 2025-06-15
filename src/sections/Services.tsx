@@ -1,9 +1,11 @@
-import React from 'react';
-import { FaTooth, FaSmile, FaTeeth, FaUserMd, FaChild, FaFirstAid } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaTooth, FaSmile, FaTeeth, FaUserMd, FaChild, FaFirstAid, FaListUl } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import PriceList from '../components/PriceList';
 
 const Services = () => {
   const { t } = useTranslation();
+  const [isPriceListOpen, setIsPriceListOpen] = useState(false);
   
   const services = [
     {
@@ -65,16 +67,28 @@ const Services = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            {t('services.contactText', 'Contact us today to schedule an appointment and learn more about how we can help you achieve a healthy, beautiful smile!')}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+            <button
+              onClick={() => setIsPriceListOpen(true)}
+              className="inline-flex items-center justify-center px-8 py-3 bg-white dark:bg-gray-700 text-primary border border-primary dark:border-primary/30 font-medium rounded-lg hover:bg-primary/5 hover:shadow-lg transition-all duration-300 gap-2"
+            >
+              <FaListUl className="text-lg" /> {t('services.viewPriceList')}
+            </button>
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary/90 to-primary text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              {t('services.scheduleAppointment')}
+            </a>
+          </div>
+          
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+            {t('services.contactText')}
           </p>
-          <a 
-            href="#contact" 
-            className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary/90 to-primary text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
-          >
-            {t('services.scheduleAppointment', 'Schedule an Appointment')}
-          </a>
         </div>
+        
+        {/* Price List Modal */}
+        <PriceList isOpen={isPriceListOpen} onClose={() => setIsPriceListOpen(false)} />
       </div>
     </section>
   );
