@@ -1,12 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaRegCheckCircle } from 'react-icons/fa';
-
-// Import images directly as modules
-import frontpic1 from '../assets/images/clinic/frontpic1.jpeg';
-import frontpic2 from '../assets/images/clinic/frontpic2.jpeg';
-import insidepic from '../assets/images/clinic/insidepic.jpeg';
-import insidepic2 from '../assets/images/clinic/insidepic2.jpeg';
+import { getImagePath, CLINIC_IMAGES } from '../lib/imageUtils';
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -79,28 +74,28 @@ const About = () => {
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
               <img 
-                src={frontpic1} 
+                src={getImagePath(CLINIC_IMAGES.FRONTPIC1)} 
                 alt="Om Mukatinath Dental Home Exterior" 
                 className="w-full h-48 object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
               <img 
-                src={insidepic} 
+                src={getImagePath(CLINIC_IMAGES.INSIDEPIC)} 
                 alt="Om Mukatinath Dental Home Interior" 
                 className="w-full h-48 object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
               <img 
-                src={insidepic2} 
+                src={getImagePath(CLINIC_IMAGES.INSIDEPIC2)} 
                 alt="Om Mukatinath Dental Home Equipment" 
                 className="w-full h-48 object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-all duration-300">
               <img 
-                src={frontpic2} 
+                src={getImagePath(CLINIC_IMAGES.FRONTPIC2)} 
                 alt="Om Mukatinath Dental Home Team" 
                 className="w-full h-48 object-cover"
               />

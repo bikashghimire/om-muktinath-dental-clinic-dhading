@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "mkdir -p public/images && cp -r src/assets/images/clinic/*.jpeg public/images/ || true",
     "build": "vite build",
+    "postbuild": "mkdir -p dist/images && cp -r public/images/* dist/images/ || true",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "sh scripts/predeploy.sh"
