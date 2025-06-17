@@ -1,0 +1,15 @@
+name = "om-muktinath"
+compatibility_date = "2025-06-17"
+main = "src/worker.js"
+
+# Static site configuration
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm run build"
+
+# Route all requests to the worker
+[routes]
+pattern = "*"
+script = "src/worker.js"

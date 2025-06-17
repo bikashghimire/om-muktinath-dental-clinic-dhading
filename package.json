@@ -7,10 +7,13 @@
     "dev": "vite",
     "prebuild": "mkdir -p public/images && cp -r src/assets/images/clinic/*.jpeg public/images/ || true",
     "build": "vite build",
-    "postbuild": "mkdir -p dist/images && cp -r public/images/* dist/images/ || true",
+    "postbuild": "mkdir -p dist/images && cp -r public/images/* dist/images/ && cp _routes.json dist/ && cp _redirects dist/ || true",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "sh scripts/predeploy.sh"
+    "predeploy": "sh scripts/predeploy.sh",
+    "deploy": "wrangler deploy --minify",
+    "deploy:cloudflare": "wrangler deploy --minify",
+    "deploy:preview": "wrangler deploy --dry-run"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
