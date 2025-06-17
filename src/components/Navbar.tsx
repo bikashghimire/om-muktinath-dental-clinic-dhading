@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { 
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -62,10 +61,10 @@ const Navbar = () => {
     <nav className={`sticky top-0 z-10 backdrop-blur-sm transition-all duration-300 bg-background/95 shadow-md border-b border-border/40`}>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 md:h-20">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center">
+          <div className="flex items-center flex-shrink-0 mr-4">
+            <div className="flex items-center">
               {/* Full name on larger screens, shortened name on very small screens */}
-              <span className="hidden sm:inline font-bold text-lg md:text-2xl lg:text-3xl tracking-tight text-primary">
+              <span className="hidden sm:inline font-bold text-lg md:text-xl lg:text-2xl tracking-tight text-primary whitespace-nowrap">
                 {t('navbar.clinicName', 'Om Muktinath Dental Home')}
               </span>
               <span className="sm:hidden font-bold text-base tracking-tight text-primary leading-tight">
@@ -75,14 +74,14 @@ const Navbar = () => {
           </div>
 
                       {/* Desktop menu */}
-                      <div className="hidden md:flex md:items-center">
+                      <div className="hidden md:flex md:items-center md:flex-grow md:justify-end">
                           <NavigationMenu>
-                              <NavigationMenuList className="gap-6">
+                              <NavigationMenuList className="gap-2 lg:gap-4">
                                   <NavigationMenuItem>
                                       <NavigationMenuLink
                                           href="#home"
                                           onClick={() => handleNavClick('home')}
-                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-6 py-3 hover:text-primary border-b-2 ${isActive('home') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('home') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
                                       >
                                           {t('navbar.home')}
                                       </NavigationMenuLink>
@@ -91,7 +90,7 @@ const Navbar = () => {
                                       <NavigationMenuLink
                                           href="#about"
                                           onClick={() => handleNavClick('about')}
-                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-6 py-3 hover:text-primary border-b-2 ${isActive('about') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('about') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
                                       >
                                           {t('navbar.about')}
                                       </NavigationMenuLink>
@@ -100,7 +99,7 @@ const Navbar = () => {
                                       <NavigationMenuLink
                                           href="#services"
                                           onClick={() => handleNavClick('services')}
-                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-6 py-3 hover:text-primary border-b-2 ${isActive('services') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('services') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
                                       >
                                           {t('navbar.services')}
                                       </NavigationMenuLink>
@@ -109,23 +108,32 @@ const Navbar = () => {
                                       <NavigationMenuLink
                                           href="#testimonials"
                                           onClick={() => handleNavClick('testimonials')}
-                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-6 py-3 hover:text-primary border-b-2 ${isActive('testimonials') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('testimonials') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
                                       >
                                           {t('navbar.testimonials')}
                                       </NavigationMenuLink>
                                   </NavigationMenuItem>
                                   <NavigationMenuItem>
                                       <NavigationMenuLink
+                                          href="#gallery"
+                                          onClick={() => handleNavClick('gallery')}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('gallery') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                      >
+                                          {t('navbar.gallery')}
+                                      </NavigationMenuLink>
+                                  </NavigationMenuItem>
+                                  <NavigationMenuItem>
+                                      <NavigationMenuLink
                                           href="#contact"
                                           onClick={() => handleNavClick('contact')}
-                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-6 py-3 hover:text-primary border-b-2 ${isActive('contact') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
+                                          className={`${navigationMenuTriggerStyle()} text-lg font-medium px-3 lg:px-4 py-3 hover:text-primary border-b-2 ${isActive('contact') ? 'border-primary text-primary' : 'border-transparent'} hover:border-primary transition-colors`}
                                       >
                                           {t('navbar.contact')}
                                       </NavigationMenuLink>
                                   </NavigationMenuItem>
                               </NavigationMenuList>
                           </NavigationMenu>
-                          <div className="ml-4 flex items-center gap-4">
+                          <div className="ml-2 lg:ml-4 flex items-center gap-2 lg:gap-4">
                               <LanguageSwitcher />
                               <ThemeToggle />
                           </div>
@@ -196,6 +204,12 @@ const Navbar = () => {
                               className={`w-full justify-start text-xl font-medium py-4 hover:text-primary hover:bg-muted/50 border-l-4 ${isActive('testimonials') ? 'border-primary text-primary bg-muted/30' : 'border-transparent'} hover:border-primary`}
                           >
                               <a href="#testimonials" onClick={() => handleNavClick('testimonials')}>{t('navbar.testimonials')}</a>
+                          </Button>
+                          <Button
+                              asChild variant="ghost"
+                              className={`w-full justify-start text-xl font-medium py-4 hover:text-primary hover:bg-muted/50 border-l-4 ${isActive('gallery') ? 'border-primary text-primary bg-muted/30' : 'border-transparent'} hover:border-primary`}
+                          >
+                              <a href="#gallery" onClick={() => handleNavClick('gallery')}>{t('navbar.gallery')}</a>
                           </Button>
                           <Button
                               asChild variant="ghost"

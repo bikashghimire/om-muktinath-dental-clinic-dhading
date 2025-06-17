@@ -10,13 +10,14 @@
       "about": "About",
       "services": "Services",
       "testimonials": "Testimonials",
+      "gallery": "Gallery",
       "contact": "Contact",
       "language": "Language",
       "clinicName": "Om Muktinath Dental Home",
       "shortClinicName": "Om Muktinath Dental Home"
     },
     "hero": {
-      "title": "Welcome to Om Muktinath",
+      "title": "Welcome to Om Muktinath Dental Home",
       "subtitle": "Your trusted partner for reliable services"
     },
     "about": {
@@ -64,7 +65,12 @@
       "closePriceList": "Close"
     },
     "testimonials": {
-      "title": "What Our Clients Say"
+      "title": "What Our Clients Say",
+      "name1": "Ramesh Shrestha",
+      "testimonial1": "My experience at Om Muktinath Dental Home was excellent. The staff were friendly and helpful.",
+      "name2": "Sujata Tamang",
+      "testimonial2": "I had my teeth cleaned here and the service was great. Dr. Anil is experienced and kind."
+    
     },
     "contact": {
       "title": "Contact Us",
@@ -103,6 +109,18 @@
       "rights": "All rights reserved",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
+    },
+    "gallery": {
+      "sectionTitle": "Gallery",
+      "title": "Our Clinic Gallery",
+      "description": "Explore our dental clinic facilities and successful treatments through our photo gallery.",
+      "imageAlt": "Dental Clinic Photo",
+      "enlargedImage": "Enlarged view",
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next",
+      "clickToView": "Click to view",
+      "imageViewer": "Image Viewer"
     }
   }
 }

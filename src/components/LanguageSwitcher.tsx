@@ -18,31 +18,31 @@ const LanguageSwitcher = ({ mobileView = false }: LanguageSwitcherProps) => {
 
   if (mobileView) {
     return (
-      <div className="grid grid-cols-2 gap-2 w-full">
+      <div className="grid grid-cols-2 gap-3 w-full">
         <button
           type="button"
           onClick={() => i18n.changeLanguage('np')}
           className={cn(
-            "py-2 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-1.5",
+            "py-2.5 text-sm font-medium rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
             currentLanguage === 'np'
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "bg-muted text-foreground hover:bg-muted/80 active:bg-muted/90"
+              ? "bg-primary/90 text-white shadow-md"
+              : "bg-muted/80 text-foreground hover:bg-muted active:bg-muted/90 border border-gray-100/10"
           )}
         >
-          <span className="text-xs">🇳🇵</span>
+          <span className="text-sm">🇳🇵</span>
           <span>नेपाली</span>
         </button>
         <button
           type="button"
           onClick={() => i18n.changeLanguage('en')}
           className={cn(
-            "py-2 text-sm font-medium rounded-md transition-all duration-200 flex items-center justify-center gap-1.5",
+            "py-2.5 text-sm font-medium rounded-xl transition-all duration-300 flex items-center justify-center gap-2",
             currentLanguage === 'en'
-              ? "bg-primary text-primary-foreground shadow-sm"
-              : "bg-muted text-foreground hover:bg-muted/80 active:bg-muted/90"
+              ? "bg-primary/90 text-white shadow-md"
+              : "bg-muted/80 text-foreground hover:bg-muted active:bg-muted/90 border border-gray-100/10"
           )}
         >
-          <span className="text-xs">🇺🇸</span>
+          <span className="text-sm">🇺🇸</span>
           <span>English</span>
         </button>
       </div>
@@ -51,20 +51,20 @@ const LanguageSwitcher = ({ mobileView = false }: LanguageSwitcherProps) => {
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className="flex items-center gap-1 px-3"
+      className="flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-primary/10 transition-all duration-300"
     >
       {currentLanguage === 'np' ? (
         <>
           <span className="text-xs">🇺🇸</span>
-          <span>EN</span>
+          <span className="text-xs font-medium">EN</span>
         </>
       ) : (
         <>
           <span className="text-xs">🇳🇵</span>
-          <span>नेपाली</span>
+          <span className="text-xs font-medium">NP</span>
         </>
       )}
     </Button>

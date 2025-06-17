@@ -8,6 +8,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Services from './sections/Services'
 import Testimonials from './sections/Testimonials'
+import Gallery from './sections/Gallery'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import { useTranslation } from 'react-i18next'
@@ -25,6 +26,7 @@ const App: React.FC = () => {
           <section id="about"><About /></section>
           <section id="services"><Services /></section>
           <section id="testimonials"><Testimonials /></section>
+          <section id="gallery"><Gallery /></section>
           <section id="contact"><Contact /></section>
           <Footer />
         </main>

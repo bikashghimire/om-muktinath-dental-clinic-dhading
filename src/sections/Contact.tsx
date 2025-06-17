@@ -26,10 +26,19 @@ const Contact = () => {
                             </div>
                             <h3 className="text-xl font-semibold ml-3 text-gray-800 dark:text-gray-200">{t('contact.doctorInfo', 'Dr. Anil Gurung')}</h3>
                         </div>
-                        <div className="pl-4 border-l-2 border-primary/30">
-                            <p className="text-gray-700 dark:text-gray-300 mb-1">{t('contact.doctorQualification', 'BDS PDCH (TU) MOE')}</p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-3">{t('contact.doctorRegistration', 'NMC 33664')}</p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 italic mt-2">"{t('contact.doctorQuote', 'A genuine smile comes from the heart, but a healthy smile comes from good dental care')}"</p>
+                        <div className="flex flex-col md:flex-row gap-4 items-start">
+                            <div className="w-full md:w-1/3">
+                                <img 
+                                    src="/gallery/927f8335-f44f-4630-aa7e-0e0edc5d5829.jpeg" 
+                                    alt={t('contact.doctorInfo', 'Dr. Anil Gurung')} 
+                                    className="w-full rounded-xl shadow-md object-cover aspect-square"
+                                />
+                            </div>
+                            <div className="w-full md:w-2/3 pl-0 md:pl-4 border-0 md:border-l-2 md:border-primary/30">
+                                <p className="text-gray-700 dark:text-gray-300 mb-1">{t('contact.doctorQualification', 'BDS PDCH (TU) MOE')}</p>
+                                <p className="text-gray-700 dark:text-gray-300 mb-3">{t('contact.doctorRegistration', 'NMC 33664')}</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400 italic mt-2">"{t('contact.doctorQuote', 'A genuine smile comes from the heart, but a healthy smile comes from good dental care')}"</p>
+                            </div>
                         </div>
                     </div>
                 
